@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Node JS Copter Demo</title>
+    <script src="nodecopter-client.js"></script>
+    <script src="socket.io.min.js"></script>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function () {
+
+            function startArDRoneStream() {
+                new NodecopterStream(document.getElementById("placeholder"), {port: 3001});
+            }
+
+            function startCameraFeed() {
+                navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+
+                var constraints = {audio: true, video: true};
+                var video = document.querySelector("video");
+
+                function successCallback(stream) {
+                    window.stream = stream; // stream available to console
+                    if (window.URL) {
+                        video.src = window.URL.createObjectURL(stream);
+                    } else {
+                        video.src = stream;
+                    }
+                    video.play();
+                }
+
+                function errorCallback(error){
+                    console.log("navigator.getUserMedia error: ", error);
+                }
+
+                navigator.getUserMedia(constraints, successCallback, errorCallback);
+
+            }
+            function startArDroneController(){
+                var socket = io.connect('http://localhost:3002');
+                socket.on('connect', function () { // TIP: you can avoid listening on `connect` and listen on events directly too!
+                    console.log("Connection Successful");
+
+                });
+
+                socket.on('event', function (data) {
+
+                    if(data.name=="battery"){
+                        $("#battery-indicator").css('width',data.value+'%');
+                        $("#battery-value").html(data.value+'%');
+                    }
+                });
+
+
+
+            }
+            startArDRoneStream();
+        })
+    </script>
+
+    <style>
+        td {
+            width = 100%;
+            height = 100%;
+        }
+        button{
+            font-size: 0pt;
+        }
+
+
+        .bar > span {
+            display: block;
+            height: 0px;
+            border-radius: 0px;
+            -moz-border-radius: 0px;
+            -webkit-border-radius: 0px;
+        }
+
+        .color0 > span {
+            background-color: #FF0000;
+        }
+        #placeholder {
+          position: absolute;
+          width: 4000px;
+          height: 4000px;
+          top: 291px;
+          left: 0px;
+        }
+        canvas {
+          width: 37.1%;
+        }
+     </style>
+</head>
+<!--
+<table>
+<tr>
+<td>
+-->
+
+
+
+<body>
+
+            <div id="placeholder">
+
+            </div>
+
+</body>
+<!--</td>
+<tr>
+</table>
+-->
+</html>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Drone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yha-2S-nKN">
+                                <rect key="frame" x="337" y="-72" width="272" height="281"/>
+                                <connections>
+                                    <segue destination="Cd1-YH-EgJ" kind="embed" id="oMS-EO-ozC"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UyB-uR-hJ1">
+                                <rect key="frame" x="-31" y="-72" width="272" height="281"/>
+                                <connections>
+                                    <segue destination="Cd1-YH-EgJ" kind="embed" id="d8p-r3-yJu"/>
+                                </connections>
+                            </containerView>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardboard-outline" translatesAutoresizingMaskIntoConstraints="NO" id="zpR-sD-4wL">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="UyB-uR-hJ1" secondAttribute="trailing" constant="43" id="4bI-vR-fxz"/>
+                            <constraint firstItem="yha-2S-nKN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-72" id="LnX-iz-uve"/>
+                            <constraint firstItem="UyB-uR-hJ1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-72" id="SkQ-ui-xkZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UyB-uR-hJ1" secondAttribute="bottom" constant="111" id="hUV-IG-X0q"/>
+                            <constraint firstItem="yha-2S-nKN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="53" id="nqf-Xs-RhF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yha-2S-nKN" secondAttribute="bottom" constant="111" id="pOy-77-1Ni"/>
+                            <constraint firstItem="UyB-uR-hJ1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-31" id="tKm-NG-TPf"/>
+                            <constraint firstAttribute="trailing" secondItem="yha-2S-nKN" secondAttribute="trailing" constant="-41" id="y2l-OD-CHH"/>
+                        </constraints>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="391" y="319"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cO9-TA-jJA">
+            <objects>
+                <viewController id="Cd1-YH-EgJ" customClass="FPVViewController" customModule="Drone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aIN-Rf-OyZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="bSE-gY-JCz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gfz-Ka-AWO">
+                        <rect key="frame" x="0.0" y="0.0" width="272" height="281"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Hk-9e-Acl">
+                                <rect key="frame" x="0.0" y="0.0" width="272" height="281"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="9Hk-9e-Acl" secondAttribute="bottom" id="VNx-oo-hTe"/>
+                            <constraint firstItem="9Hk-9e-Acl" firstAttribute="leading" secondItem="gfz-Ka-AWO" secondAttribute="leading" id="f5p-b1-LAM"/>
+                            <constraint firstItem="9Hk-9e-Acl" firstAttribute="top" secondItem="gfz-Ka-AWO" secondAttribute="top" id="wwD-n8-jJn"/>
+                            <constraint firstAttribute="trailing" secondItem="9Hk-9e-Acl" secondAttribute="trailing" id="xAZ-WK-Omq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="9Hk-9e-Acl" id="mR8-ii-cRX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ct-LF-x3G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="72" y="845.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cardboard-outline" width="568" height="320"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="oMS-EO-ozC"/>
+    </inferredMetricsTieBreakers>
+</document>

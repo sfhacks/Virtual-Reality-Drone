@@ -1,0 +1,55 @@
+{
+  "name": "drone-ps3-controller",
+  "version": "0.1.0",
+  "description": "Control your ar.drone with ps3 controller.",
+  "main": "index.js",
+  "dependencies": {
+    "ar-drone": "~0.1.0",
+    "ps3.js": "~0.0.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bobrik/drone-ps3-controller.git"
+  },
+  "keywords": [
+    "ps3",
+    "controller",
+    "gamepad",
+    "hid",
+    "ar.drone",
+    "ardrone",
+    "drone"
+  ],
+  "author": {
+    "name": "Ian Babrou",
+    "email": "ibobrik@gmail.com",
+    "url": "http://bobrik.name/"
+  },
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "readme": "drone-ps3-controller\n====\n\nControl your ar.drone with ps3 controller.\n\n### Installation\n\n```\nnpm drone-ps3-controller\n```\n\n### Running\n\n```\ncd drone-ps3-controller\nnpm start\n```\n\n### Flying\n\nHere's mapping. It's very similar to iPhone app.\n\n![](https://raw.github.com/bobrik/drone-ps3-controller/master/mapping.jpg)\n\n### But there is [node-drone-joystick](https://github.com/TooTallNate/node-drone-joystick)\n\nThis thing didn't worked for me so I made my own.\n\n### Testing\n\nI tested it on my macbook air and ar.drone 2.0. It works :)\n\n### Authors\n\n* [Ian Babrou](https://github.com/bobrik)\n",
+  "_id": "drone-ps3-controller@0.1.0",
+  "dist": {
+    "shasum": "d2dcfce1d49647d9796164aaa5e493bc1db79e9f",
+    "tarball": "http://registry.npmjs.org/drone-ps3-controller/-/drone-ps3-controller-0.1.0.tgz"
+  },
+  "_from": "drone-ps3-controller@*",
+  "_npmVersion": "1.2.18",
+  "_npmUser": {
+    "name": "bobrik",
+    "email": "ibobrik@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "bobrik",
+      "email": "ibobrik@gmail.com"
+    }
+  ],
+  "directories": {},
+  "_shasum": "d2dcfce1d49647d9796164aaa5e493bc1db79e9f",
+  "_resolved": "https://registry.npmjs.org/drone-ps3-controller/-/drone-ps3-controller-0.1.0.tgz"
+}

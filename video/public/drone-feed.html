@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drone Stream</title>
+    <script src="nodecopter-client.js"></script>
+</head>
+<body>
+    <h1>Ar Drone Parrot Feed</h1>
+    <div id="placeholder" style="border: 0px solid black"></div>
+
+
+    <script>
+        new NodecopterStream(document.getElementById("placeholder"), {hostname:'localhost',port: 3001});
+    </script>
+
+</body>
+</html>

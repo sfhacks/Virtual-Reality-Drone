@@ -1,0 +1,17 @@
+{
+    "name": "NodeCopter-Trail",
+    "description": "NodeCopter Trail",
+    "author": "VR Drone",
+    "version": "0.0.1",
+    "dependencies": {
+        "ar-drone": "latest",
+        "express": "latest",
+        "socket.io":"latest",
+        "socket.io-client":"latest",
+        "dronestream":"latest"
+    },
+    "devDependencies": {
+
+    },
+    "engine": "node >= 0.6.6"
+}
