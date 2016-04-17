@@ -33,7 +33,7 @@ The goal of this project is to broadcast an AR Drone 2.0's video feed onto a Goo
   * Start the Xcode app and the video feed should appear with Google Cardboard format
   * Go back to the terminal, navigate into the ps3 file
   * Connect the ps3 to your computer's bluetooth
-  * Type npm start in the terminal
+  * Type 'npm start' in the terminal
   * Connect your iPhone to your Mac using the lighning cable and make sure it mirrors using the "Duet" app
   * Fire up the Xcode simulator and zoom in so its full screen on your computer
   * On the iPhone, the video from the drone should appear to be full screen and in Google Cardboard Format (it is mirroring the laptop)
