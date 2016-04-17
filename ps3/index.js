@@ -6,8 +6,8 @@
         angle    = 128,
         speed    = 0.15;
 
-    var flippedL = false;
-    var flippedR = false;
+    var flippedL = 1;
+    var flippedR = 1;
 
     client.config('control:altitude_max', 200000)
     client.config('control:control_vz_max', 2000)
@@ -22,8 +22,7 @@
     console.log("  Triangle: Takeoff");
     console.log("  X: Land");
     console.log("");
-    console.log("  Circle: Flip Right");
-    console.log("  Square: Flip Left");
+    console.log("  Square: Initiate LED sequence");
     console.log("");
     console.log("  Left Joypad: Front/Back/Side");
     console.log("  Right Joypad: Up/Down");
@@ -31,7 +30,6 @@
 
     setInterval(function() {
         on("x", rdata[24]);
-        on("circle", rdata[23]);
         on("triangle", rdata[22]);
         on("square", rdata[25]);
         on("left", {x: rdata[6], y: rdata[7]});
@@ -69,6 +67,10 @@
                 });
             }
         }
+        if(type=="square" && value > 44) {
+          console.log("Blinking");
+          client.animateLeds('snakeGreenRed', 5 , 4);
+        }
 
         if (hovering) {
             if (type == "left" && value.y <= 128) {
@@ -95,17 +97,9 @@
                 client.down((value.y - 128) / angle * speed);
             }
 
-            if(type=="square" && value > 100 && !flippedL) {
-              console.log("Flip Left");
-              client.animate("flipLeft", 1500);
-              flippedL = true;
-            }
 
-            if(type=="circle" && value > 100 && !flippedR) {
-              console.log("Flip Right");
-              client.animate("flipRight", 1500);
-              flippedR = true;
-            }
+
+
         }
     }
 })();
