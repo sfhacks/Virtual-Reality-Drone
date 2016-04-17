@@ -10,7 +10,7 @@ The goal of this project is to broadcast an AR Drone 2.0's video feed onto a Goo
 
   * Video -- The neccessary components to broadcast the drone's video feed onto the computer's localhost
 
-  * PS3 -- The eccessary components to control the drone with a PS3 dualshock controller
+  * PS3 -- The neccessary components to control the drone with a PS3 dualshock controller
 
 ### Neccessary Hardware/Software
 
