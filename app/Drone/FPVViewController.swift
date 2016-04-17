@@ -3,7 +3,7 @@
 //  Drone
 //
 //  Created 4/16/2016.
-//  Copyright © 2016 Arnav, Nishan & Chern, et. al. All rights reserved.
+//  Copyright © 2016 VR Drone, et. al. All rights reserved.
 //
 
 import UIKit
