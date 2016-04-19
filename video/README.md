@@ -1,13 +1,11 @@
-AR Drone Browser Controller
+A.R Drone Video Stream
 ==========================
 
-It shows Feed from
- * Ar Drone Parrot 2
-
+It broadcasts stream from the A.R. Drone 2.0 to your localhost:3000
 
 References
 ------------
-This project internally uses following libraries
+This project uses following libraries:
  * node-ar-drone
  * dronestream
  * socket.io
