@@ -1,7 +1,7 @@
 A.R Drone Video Stream
 ==========================
 
-It broadcasts stream from the A.R. Drone 2.0 to your localhost:3000
+This broadcasts the stream from the A.R. Drone 2.0 to localhost:3000
 
 References
 ------------
