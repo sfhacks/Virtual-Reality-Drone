@@ -25,11 +25,11 @@ The goal of this project is to broadcast an AR Drone 2.0's video feed onto a Goo
 
   * Download all source files
   * Connect to the drone's wifi network
-  * Navigate into video file and commence with npm start (make sure to do npm install first!)
+  * Navigate into video file and commence with npm start (make sure to do npm install while connected to the world wide web first!)
   * Go to desired browser and access your localhost
   * Make sure your video feed is showing up
   * Go back to the terminal and type ifconfig en0 to get your ip address
-  * Navigate to the xcode app and replace the ip address provided with the yours
+  * Navigate to the xcode app and replace the ip address provided with yours
   * Start the Xcode app and the video feed should appear with Google Cardboard format
   * Go back to the terminal, navigate into the ps3 file
   * Connect the ps3 to your computer's bluetooth
