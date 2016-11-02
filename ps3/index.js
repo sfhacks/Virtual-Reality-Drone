@@ -4,7 +4,7 @@
     var arDrone  = require("ar-drone"),
         client   = arDrone.createClient(),
         angle    = 128,
-        speed    = 0.15;
+        speed    = 0.7;
 
     var flippedL = 1;
     var flippedR = 1;

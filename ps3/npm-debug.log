@@ -18,8 +18,8 @@
 9 verbose stack     at maybeClose (internal/child_process.js:818:16)
 9 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
 10 verbose pkgid drone-ps3-controller@0.1.0
-11 verbose cwd /Users/Arnav_Gudibande/Documents/Documents/Programming/JavaScript/VR-Drone/ps3
-12 error Darwin 15.4.0
+11 verbose cwd /Users/Arnav_Gudibande/Documents/Programming/sfhacks/Virtual-Reality-Drone/ps3
+12 error Darwin 16.0.0
 13 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "start"
 14 error node v4.2.0
 15 error npm  v2.14.7

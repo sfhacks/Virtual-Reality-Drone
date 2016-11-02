@@ -14,9 +14,8 @@ class FPVViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = NSURL(string: "http://192.168.1.2:3000")!
-        //let url = NSURL(string: "https://www.google.com")!
-        webView.loadRequest(NSURLRequest(URL: url))
+        let url = URL(string: "http://192.168.1.3:3000")!
+        webView.loadRequest(URLRequest(url: url))
     }
 
     override func didReceiveMemoryWarning() {
